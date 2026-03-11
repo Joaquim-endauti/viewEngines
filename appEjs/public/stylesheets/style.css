@@ -1,0 +1,57 @@
+/* General page reset and layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #180b4e;
+  text-align: center;
+}
+
+/* blurred background using pseudo-element so content stays sharp */
+body {
+  position: relative;
+  background: url("https://sm.ign.com/ign_nordic/gallery/h/honkai-sta/honkai-star-rail-gamescom-2022_1t9x.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+h1 {
+  margin-top: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.688);
+}
+
+#phainon {
+  height: 900px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+  margin-top: 20px;
+}
+
+/* semi-transparent container to keep text readable */
+.content-overlay {
+  display: inline-block;
+  background: rgba(0,0,0,0.5);
+  padding: 20px 40px;
+  border-radius: 16px;
+  margin-top: 60px;
+}
+
+/* hyperlink color matching Phainon's palette */
+a {
+  color: #a8e6cf;
+}
+
