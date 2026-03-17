@@ -1,0 +1,331 @@
+doctype html
+html(lang='pt-BR')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Omniscient Reader's Viewpoint — #{title}
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/orv.css')
+
+  body
+
+    //- ===== NAV =====
+    nav.nav
+      span.nav__logo &lt;ORV&gt;
+      ul.nav__links
+        li: a(href='#synopsis') Synopsis
+        li: a(href='#characters') Personagens
+        li: a(href='#world') O Mundo
+        li: a(href='#constellations') Constelações
+        li: a(href='#adaptations') Adaptações
+
+    //- ===== HERO =====
+    header.hero
+      .hero__noise
+      .hero__lines
+        - for (var i = 0; i < 8; i++)
+          span.hero__line
+      .hero__inner
+        .hero__meta
+          span.hero__tag WEBNOVEL
+          span.hero__sep ·
+          span.hero__tag MANHWA
+          span.hero__sep ·
+          span.hero__tag FILME 2025
+        h1.hero__title
+          span.hero__title-ko 전지적 독자 시점
+          span.hero__title-en Omniscient Reader's Viewpoint
+        p.hero__byline
+          | Por&nbsp;
+          strong singNsong
+          |  · 3.149 capítulos · Publicado em 2018
+        p.hero__quote
+          | "Eu era o único leitor.&nbsp;
+          em E agora o livro se tornou o mundo."
+        .hero__cta
+          a.btn.btn--primary(href='https://www.webtoons.com/en/action/omniscient-reader/list?title_no=2154', target='_blank', rel='noopener') Ler o Manhwa
+          a.btn.btn--ghost(href='https://www.novelupdates.com/series/omniscient-readers-viewpoint/', target='_blank', rel='noopener') Ler o Novel
+      .hero__counter
+        .hero__stat
+          span.hero__stat-num 3.149
+          span.hero__stat-label Capítulos
+        .hero__stat
+          span.hero__stat-num 13
+          span.hero__stat-label Anos de leitura solitária
+        .hero__stat
+          span.hero__stat-num ∞
+          span.hero__stat-label Regressões de Yoo Joonghyuk
+
+    //- ===== SYNOPSIS =====
+    section#synopsis.section
+      .section__inner
+        .synopsis-layout
+          .synopsis-text
+            h2.section__title Synopsis
+            p
+              | Kim Dokja é um office worker comum na casa dos vinte anos.
+              | Sua única alegria é acompanhar semanalmente o webnovel
+              |
+              em Three Ways to Survive in a Ruined World
+              | , escrito pelo misterioso autor
+              strong  tls123
+              | . Por 13 anos, desde o episódio 100, ele foi
+              strong  o único leitor.
+            p
+              | No dia em que o capítulo final é publicado, a realidade começa a se fundir com a ficção.
+              | Cenários apocalípticos surgem, monstros invadem as ruas, e o mundo que Dokja conhecia
+              | se transforma literalmente na história que ele leu.
+            p
+              | Com um conhecimento que ninguém mais possui — o enredo completo, os segredos dos personagens,
+              | os fins dos arcos — Dokja se torna o homem mais importante do apocalipse.
+              | Não por força bruta. Mas por ter
+              strong  lido cada página.
+            blockquote.pull-quote
+              | "A história que você leu pode ser a arma mais poderosa do mundo."
+          .synopsis-aside
+            .info-card
+              h3 Informações
+              ul.info-list
+                li
+                  span.info-label Título Original
+                  span 전지적 독자 시점
+                li
+                  span.info-label Autores
+                  span singNsong (Sing Shong)
+                li
+                  span.info-label Publicação
+                  span 6 jan. 2018 — 2 fev. 2020
+                li
+                  span.info-label Plataforma
+                  span Munpia / Naver
+                li
+                  span.info-label Capítulos
+                  span 3.149 (+extras)
+                li
+                  span.info-label Gêneros
+                  span Apocalipse · Fantasy · Meta-ficção
+                li
+                  span.info-label Manhwa
+                  span Redice Studio (2020–presente)
+                li
+                  span.info-label Filme
+                  span 23 jul. 2025 (Coreia)
+
+    //- ===== CHARACTERS =====
+    section#characters.section.section--dark
+      .section__inner
+        h2.section__title Personagens Principais
+        .char-grid
+          .char-card
+            .char-card__role PROTAGONISTA
+            h3.char-card__name Kim Dokja
+            p.char-card__title 金讀者 · O Leitor
+            p.char-card__desc
+              | O único leitor de TWSA. Não é um herói tradicional — é
+              | inteligente, dissimulado e carrega o peso de conhecer o fim.
+              | Usa o conhecimento do enredo para sobreviver e proteger os que ama,
+              | mesmo que isso signifique mentir para todos.
+            .char-card__attr
+              span.attr Habilidade: 
+              em Fourth Wall
+          .char-card.char-card--blue
+            .char-card__role DEUTERAGONISTA
+            h3.char-card__name Yoo Joonghyuk
+            p.char-card__title 유중혁 · O Regressor
+            p.char-card__desc
+              | Protagonista do webnovel dentro da história. Dotado de uma
+              | habilidade única de regressão — ele retorna ao início dos cenários
+              | acumulando poder a cada ciclo, ao custo crescente da sua sanidade.
+            .char-card__attr
+              span.attr Habilidade: 
+              em Regression
+          .char-card.char-card--red
+            .char-card__role DEUTERAGONISTA
+            h3.char-card__name Han Sooyoung
+            p.char-card__title 한수영 · A Escritora
+            p.char-card__desc
+              | Inicialmente uma anomalia perturbadora — seu conhecimento
+              | de TWSA rivaliza o de Dokja. Escritora talentosa que eventualmente
+              | assume o papel de liderança que Dokja constantemente abandona.
+            .char-card__attr
+              span.attr Habilidade: 
+              em Omniscient Writer's Viewpoint
+          .char-card.char-card--green
+            .char-card__role COMPANHEIRA
+            h3.char-card__name Yoo Sangah
+            p.char-card__title 유상아 · A Intérprete
+            p.char-card__desc
+              | Colega de trabalho de Dokja, gentil e resiliente. Sua habilidade
+              | de interpretação nasceu do fato de estar estudando espanhol
+              | no momento em que os cenários começaram.
+            .char-card__attr
+              span.attr Habilidade: 
+              em Interpretation
+          .char-card
+            .char-card__role COMPANHEIRO
+            h3.char-card__name Jung Heewon
+            p.char-card__title 정희원 · A Punidora
+            p.char-card__desc
+              | Guerreira brutal e leal, conhecida como Punisher. Uma das
+              | favoritas dos fãs por sua personalidade direta e sua devoção
+              | feroz ao grupo de Dokja.
+            .char-card__attr
+              span.attr Habilidade: 
+              em Absolute Sword
+          .char-card.char-card--blue
+            .char-card__role COMPANHEIRO
+            h3.char-card__name Lee Hyunsung
+            p.char-card__title 이현성 · O Escudo
+            p.char-card__desc
+              | Soldado e pai de coração generoso. Representa a esperança
+              | genuína dentro do grupo — alguém que luta não por vingança
+              | ou poder, mas para proteger.
+            .char-card__attr
+              span.attr Habilidade: 
+              em Indomitable Will
+
+    //- ===== WORLD =====
+    section#world.section
+      .section__inner
+        h2.section__title O Mundo de ORV
+        .world-grid
+          .world-block
+            .world-block__icon ◈
+            h3 Star Stream
+            p
+              | Sistema que transmite ao vivo os cenários para toda a galáxia.
+              | Constellations assistem como espectadores, incarnations são os atores.
+              | Dokkaebis gerenciam os streams e fazem as regras dos cenários.
+          .world-block
+            .world-block__icon ◉
+            h3 Cenários
+            p
+              | Provações impostas aos incarnations. Variam de batalhas e
+              | sobrevivência a dilemas morais complexos. Completá-los garante
+              | coins, habilidades e crescimento de poder.
+          .world-block
+            .world-block__icon ✦
+            h3 Constellations
+            p
+              | Seres imortalizados pela história da humanidade — deuses, heróis
+              | míticos, figuras históricas. Assistem os cenários e patrocinam
+              | incarnations favoritas em troca de coins e fama.
+          .world-block
+            .world-block__icon ❖
+            h3 Incarnations
+            p
+              | Humanos que participam dos cenários. Podem crescer, adquirir
+              | habilidades e, eventualmente, ascender ao status de Constellation
+              | acumulando suas próprias histórias.
+          .world-block
+            .world-block__icon ☽
+            h3 Dokkaebis
+            p
+              | Goblins mágicos que administram os cenários e os livestreams.
+              | Mediadores entre Constellations e Incarnations. Biyoo é uma
+              | das mais importantes para a história de Dokja.
+          .world-block
+            .world-block__icon ∎
+            h3 Fables
+            p
+              | Histórias que definem uma pessoa. Quanto mais poderosa sua
+              | fable, mais forte o ser. O conceito central da metaficção de
+              | ORV: sua história é seu poder.
+
+    //- ===== CONSTELLATIONS =====
+    section#constellations.section.section--dark
+      .section__inner
+        h2.section__title Constelações Notáveis
+        p.section__lead
+          | Seres imortalizados pela história humana que assistem e patrocinam os cenários pelo&nbsp;
+          em Star Stream.
+        .constel-list
+          .constel-item
+            .constel-item__nebula EDEN
+            h4 Uriel
+            p
+              em Demon-like Judge of Fire
+              |  · Arcanjo feroz e leal, uma das maiores apoiadoras de Dokja.
+              | Conhecida pelo humor vívido e o suporte incondicional à companhia.
+          .constel-item
+            .constel-item__nebula BLACK CLOUD
+            h4 Abyssal Black Flame Dragon
+            p
+              | Líder da nebula Black Cloud. Apesar de estar do lado do mal absoluto,
+              | tornou-se um dos maiores fãs do canal de Dokja — e patrocinador da Han Sooyoung.
+          .constel-item
+            .constel-item__nebula OLYMPUS
+            h4 Hades
+            p
+              em Father of the Richest Night
+              |  · Rei do submundo e um dos três grandes deuses do Olympus.
+              | Demonstrou interesse em Dokja desde o início da história.
+          .constel-item
+            .constel-item__nebula EMPEROR
+            h4 Sun Wukong
+            p
+              em Prisoner of the Golden Headband
+              |  · O Rei Macaco lendário da nebula Emperor. Fascinado pela jornada de Dokja.
+          .constel-item.constel-item--mystery
+            .constel-item__nebula ???
+            h4 Secretive Plotter
+            p
+              | Uma das constelações mais misteriosas. Identidade verdadeira oculta por toda
+              | a história. Papel crucial nos eventos mais profundos da narrativa.
+          .constel-item
+            .constel-item__nebula ASGARD
+            h4 Thor / Odin e outros
+            p
+              | A nebula nórdica Asgard contém figuras como Thor e Odin, representando
+              | a mitologia escandinava dentro do sistema do Star Stream.
+
+    //- ===== ADAPTATIONS =====
+    section#adaptations.section
+      .section__inner
+        h2.section__title Adaptações
+        .adapt-grid
+          .adapt-card
+            .adapt-card__year 2020
+            .adapt-card__type MANHWA
+            h3 Webtoon
+            p
+              | Adaptação em manhwa pelo estúdio&nbsp;
+              strong Redice Studio
+              | , publicada pela Naver Webtoon (KR) e Line Webtoon (EN).
+              | Arte deslumbrante com painéis dinâmicos e composições cinemáticas.
+            a.adapt-link(href='https://www.webtoons.com/en/action/omniscient-reader/list?title_no=2154', target='_blank', rel='noopener') Ler no Line Webtoon →
+          .adapt-card.adapt-card--film
+            .adapt-card__year 2025
+            .adapt-card__type FILME
+            h3 Live-Action
+            p
+              | Filme live-action estreou em&nbsp;
+              strong 23 de julho de 2025
+              |  na Coreia do Sul. Com
+              strong  Ahn Hyo-seop
+              |  como Kim Dokja e
+              strong  Lee Min-ho
+              |  como Yoo Joonghyuk.
+              | Arrecadou US$ 7,9 milhões mundialmente até outubro de 2025.
+            span.adapt-link Em cartaz / em breve no streaming →
+          .adapt-card
+            .adapt-card__year TBA
+            .adapt-card__type ANIME
+            h3 Anime
+            p
+              | Uma adaptação em anime televisivo foi anunciada oficialmente.
+              | Detalhes de estúdio e data de estreia ainda a serem confirmados.
+            span.adapt-link Em desenvolvimento →
+
+    //- ===== FOOTER =====
+    footer.site-footer
+      .footer__inner
+        p.footer__title &lt;ORV&gt;
+        p
+          | Site feito com ❤ para fãs de&nbsp;
+          a(href='https://omniscient-readers-viewpoint.fandom.com', target='_blank', rel='noopener') Omniscient Reader's Viewpoint
+          | . Conteúdo baseado no wiki oficial e fontes públicas.
+        p.footer__small
+          | Omniscient Reader's Viewpoint © singNsong / Redice Studio. Site não-oficial, sem fins lucrativos.

@@ -1,11 +1,251 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> — O Portador da Coreflame</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p><img id="phainon" src="https://static.icy-veins.com/images/honkai-star-rail/characters/full/phainon.webp" alt="Phainon"></p>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+      <div class="hero__glow hero__glow--left"></div>
+      <div class="hero__glow hero__glow--right"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Chrysos Heir · Destruição · Físico</p>
+        <h1 class="hero__title">PHAINON</h1>
+        <p class="hero__subtitle">O Portador do Coreflame do Mundo</p>
+        <p class="hero__quote">
+          "Se o amanhecer nunca chegar, que esta fúria consuma este corpo<br/>
+          e se erga como o sol ardente de amanhã."
+        </p>
+        <div class="hero__tags">
+          <span class="tag">★★★★★</span>
+          <span class="tag">Destruição</span>
+          <span class="tag">Físico</span>
+          <span class="tag tag--gold">Ver. 3.4</span>
+        </div>
+      </div>
+      <div class="hero__image-wrap">
+        <div class="hero__halo"></div>
+        <img
+          id="phainon-img"
+          src="https://static.icy-veins.com/images/honkai-star-rail/characters/full/phainon.webp"
+          alt="Phainon"
+        />
+      </div>
+    </header>
+
+    <!-- ===== LORE ===== -->
+    <section class="section" id="lore">
+      <div class="section__inner">
+        <h2 class="section__title">História</h2>
+        <div class="lore-grid">
+          <div class="lore-card">
+            <div class="lore-card__icon">⚔</div>
+            <h3>Origem</h3>
+            <p>
+              Nascido em <strong>Aedes Elysiae</strong>, uma aldeia remota hoje vivendo apenas em lendas,
+              Phainon — cujo nome verdadeiro é <strong>Khaslana</strong> — cresceu com uma imaginação ativa
+              e uma coragem inata. Desde criança esculpia soldados de madeira e sonhava em ser um herói.
+            </p>
+          </div>
+          <div class="lore-card">
+            <div class="lore-card__icon">🔥</div>
+            <h3>O Portador</h3>
+            <p>
+              Phainon é o <strong>Chrysos Heir</strong> portador do Coreflame de "Carregador do Mundo"
+              (<em>Worldbearing</em>), concedido pelo Titã Kephale. Profetizado como o único sobrevivente
+              da Caçada às Chamas, ele carrega o destino de incontáveis vidas.
+            </p>
+          </div>
+          <div class="lore-card">
+            <div class="lore-card__icon">♾</div>
+            <h3>Os Loops Eternos</h3>
+            <p>
+              Para evitar o nascimento de Irontomb — um Lord Ravager da Destruição —, Phainon tomou os
+              <strong>12 Coreflames</strong> em seu próprio corpo e reiniciou a linha do tempo, vivendo
+              a mesma vida mais de 33 milhões de vezes, transformando-se no Flame Reaver.
+            </p>
+          </div>
+          <div class="lore-card">
+            <div class="lore-card__icon">☀</div>
+            <h3>Okhema</h3>
+            <p>
+              Ao lado dos Chrysos Heirs, Phainon ajudou a defender <strong>Okhema</strong> contra o
+              Titã Strife Nikador. Seu senso de honra ficou evidente quando, mesmo tendo ganho a aposta,
+              insistiu que Mydei desferisse o golpe final para honrar seu sacrifício anterior.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IDENTITY ===== -->
+    <section class="section section--dark" id="identity">
+      <div class="section__inner two-col">
+        <div class="identity-text">
+          <h2 class="section__title section__title--left">Identidade</h2>
+          <ul class="identity-list">
+            <li><span class="label">Nome Verdadeiro</span> Khaslana</li>
+            <li><span class="label">Título</span> O Entregador (救世主)</li>
+            <li><span class="label">Origem</span> Aedes Elysiae, Amphoreus</li>
+            <li><span class="label">Arma</span> Espada Dawnmaker (Helios)</li>
+            <li><span class="label">Afiliação</span> Aedes Elysiae / Chrysos Heirs</li>
+            <li><span class="label">Pai</span> Hieronymus †</li>
+            <li><span class="label">Mãe</span> Audata †</li>
+            <li><span class="label">Relação</span> Expy de Kevin Kaslana (Honkai Impact 3rd)</li>
+          </ul>
+          <p class="identity-flavor">
+            Seu nome vem de <em>Phaenon</em> — designação grega para o planeta Saturno.
+            Em chinês, 白厄 (<em>Bái-è</em>) une "branco/puro" e "adversidade/calamidade":
+            a dualidade perfeita de um herói que carrega tanto a luz quanto a ruína.
+          </p>
+        </div>
+        <div class="identity-appearance">
+          <h3>Aparência</h3>
+          <p>
+            Phainon é um homem alto e robusto, com <strong>cabelos brancos</strong> bagunçados
+            e <strong>olhos ciano</strong> brilhantes. No pescoço usa um choker de couro marrom
+            que cobre uma marca dourada em forma de sol — o selo do Coreflame.
+          </p>
+          <p>
+            Veste uma pauldron branca e dourada no ombro direito, conectada por um cinto de
+            couro que cruza o peito. Carrega uma enorme capa lapis solta no ombro esquerdo,
+            calças pretas e botas largas, com uma alça de couro na coxa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMBATE ===== -->
+    <section class="section" id="combat">
+      <div class="section__inner">
+        <h2 class="section__title">Mecânicas de Combate</h2>
+        <p class="section__lead">
+          Phainon é um <strong>DPS principal</strong> Physical/Destruição que entra em um
+          estado transformado — o <em>Flame Reaver</em> — ao acumular 12 pontos de
+          <strong>Coreflame</strong>.
+        </p>
+        <div class="ability-grid">
+          <div class="ability-card">
+            <div class="ability-card__header">
+              <span class="ability-tag">Básico</span>
+              <h4>Ataque Normal</h4>
+            </div>
+            <p>Ataque físico padrão que aplica dano ao alvo.</p>
+          </div>
+          <div class="ability-card ability-card--skill">
+            <div class="ability-card__header">
+              <span class="ability-tag ability-tag--skill">Habilidade</span>
+              <h4>Coreflame Strike</h4>
+            </div>
+            <p>
+              Gera pontos de <strong>Coreflame</strong> ao usar e quando é alvo de habilidade
+              de aliado. Alvo de aliado também concede +30% CRIT DMG por 3 turnos.
+            </p>
+          </div>
+          <div class="ability-card ability-card--ult">
+            <div class="ability-card__header">
+              <span class="ability-tag ability-tag--ult">Ultimate</span>
+              <h4>Transformação</h4>
+            </div>
+            <p>
+              Consome 12 Coreflame. Phainon se transforma, implanta um <em>Território</em>,
+              inimigos ganham fraqueza Física e aliados ficam <em>Departed</em> — seus buffs
+              permanecem mas não agem. Phainon passa a gerenciar o recurso <strong>Scourge</strong>.
+            </p>
+          </div>
+          <div class="ability-card ability-card--enhanced">
+            <div class="ability-card__header">
+              <span class="ability-tag ability-tag--enhanced">Transformado</span>
+              <h4>Enhanced E Skill</h4>
+            </div>
+            <p>
+              Com 4 Scourge gera até <strong>1170% ATK</strong> em um único alvo — um dos
+              multiplicadores mais altos do jogo.
+            </p>
+          </div>
+          <div class="ability-card ability-card--enhanced">
+            <div class="ability-card__header">
+              <span class="ability-tag ability-tag--enhanced">Transformado</span>
+              <h4>Enhanced W Skill (Soulscorch)</h4>
+            </div>
+            <p>
+              Avança todos os inimigos no turno imediatamente. Ganha Soulscorch que reduz
+              dano recebido em <strong>75%</strong> enquanto inimigos atacam.
+            </p>
+          </div>
+          <div class="ability-card">
+            <div class="ability-card__header">
+              <span class="ability-tag">Técnica</span>
+              <h4>Domínio do Campo</h4>
+            </div>
+            <p>
+              Derrota inimigos normais sem iniciar combate. Aumenta o limite de Technique
+              Points do time para <strong>8</strong> (padrão: 5).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BUILD ===== -->
+    <section class="section section--dark" id="build">
+      <div class="section__inner">
+        <h2 class="section__title">Build Recomendada</h2>
+        <div class="build-grid">
+          <div class="build-block">
+            <h3>🗡 Light Cone</h3>
+            <ul>
+              <li><strong>Thus Burns the Dawn</strong> (BiS) — ignora DEF do inimigo e amplifica DMG pós-Ultimate</li>
+              <li>On the Fall of an Aeon — boa opção acessível</li>
+              <li>A Trail of Bygone Blood (4★) — alternativa sólida</li>
+            </ul>
+          </div>
+          <div class="build-block">
+            <h3>💎 Relíquias</h3>
+            <ul>
+              <li><strong>Wavestrider Captain</strong> — bônus de ATK no estado transformado</li>
+              <li><strong>Arcadia of Woven Dreams</strong> — amplifica DMG no estado transformado</li>
+              <li>Body: CRIT Rate | Esfera: Physical DMG | Corda: ATK%</li>
+            </ul>
+          </div>
+          <div class="build-block">
+            <h3>📊 Stats Alvo</h3>
+            <ul>
+              <li>CRIT Rate: ~100%</li>
+              <li>CRIT DMG: 150%+ sem buffs</li>
+              <li>ATK: 2500+ recomendado</li>
+              <li>SPD: Depende dos supports (ATK ou SPD boots)</li>
+            </ul>
+          </div>
+          <div class="build-block">
+            <h3>👥 Melhores Times</h3>
+            <ul>
+              <li><strong>Sunday + Bronya</strong> — máximo potencial</li>
+              <li><strong>Sunday + Tingyun</strong> — excelente turn advance + energia</li>
+              <li>Remembrance Trailblazer — Mem acumula carga mesmo no estado transformado</li>
+              <li>Funciona com times f2p acessíveis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <p>
+        Site feito com ❤ para fãs de
+        <a href="https://hsr.hoyoverse.com" target="_blank" rel="noopener">Honkai: Star Rail</a>.
+        Conteúdo baseado no wiki oficial da Fandom e Prydwen.gg.
+      </p>
+      <p class="footer__small">Honkai: Star Rail © HoYoverse. Site não-oficial, sem fins lucrativos.</p>
+    </footer>
+
   </body>
 </html>
