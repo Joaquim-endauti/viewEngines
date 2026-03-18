@@ -281,6 +281,20 @@ html(lang='pt-BR')
               | A nebula nórdica Asgard contém figuras como Thor e Odin, representando
               | a mitologia escandinava dentro do sistema do Star Stream.
 
+    //- ===== CONSTELAÇÕES MUNDANAS =====
+    section#mundane-constellations.section.section--light
+      .section__inner
+        h2.section__title Constelações Mundanas
+        p.section__lead
+          | Constelações comuns que representam conceitos cotidianos. Digite um número de 1 a 5 para ver uma constelação específica.
+        .mundane-selector
+          label(for='constel-number') Número da constelação:
+          input#constel-number(type='number', min='1', max='5', placeholder='1-5')
+          button#show-constel.btn.btn--secondary Mostrar Constelação
+        .mundane-card#mundane-card(style='display: none;')
+          h3#constel-name
+          p#constel-desc
+
     //- ===== ADAPTATIONS =====
     section#adaptations.section
       .section__inner
@@ -329,3 +343,17 @@ html(lang='pt-BR')
           | . Conteúdo baseado no wiki oficial e fontes públicas.
         p.footer__small
           | Omniscient Reader's Viewpoint © singNsong / Redice Studio. Site não-oficial, sem fins lucrativos.
+
+  script.
+    const constellation = !{JSON.stringify(constellation)};
+    document.getElementById('show-constel').addEventListener('click', () => {
+      const num = parseInt(document.getElementById('constel-number').value);
+      if (num >= 1 && num <= constellation.length) {
+        const constel = constellation[num - 1];
+        document.getElementById('constel-name').textContent = constel.nome;
+        document.getElementById('constel-desc').textContent = constel.descricao;
+        document.getElementById('mundane-card').style.display = 'block';
+      } else {
+        alert('Número inválido. Digite um número de 1 a ' + constellation.length);
+      }
+    });

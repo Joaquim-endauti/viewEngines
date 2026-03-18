@@ -19,7 +19,7 @@
         <li><a href="#identidade">Identidade</a></li>
         <li><a href="#complexidade">Complexidade</a></li>
         <li><a href="#arco">Arco</a></li>
-        <li><a href="#arte">Arte</a></li>
+        <li><a href="#teorias">Teorias</a></li>
         <li><a href="#legado">Legado</a></li>
       </ul>
     </nav>
@@ -417,101 +417,18 @@
       </div>
     </section>
 
-    {{!-- ARTE --}}
-    <section id="arte" class="section">
+    {{!-- TEORIAS --}}
+    <section id="teorias" class="section">
       <div class="section__inner">
         <h2 class="section__title">
-          <span class="section__title-roman">V.</span> Arte & Representações
+          <span class="section__title-roman">V.</span> Teorias dos Fãs
         </h2>
         <p class="section__lead">
-          Jon Snow inspirou décadas de arte de fãs e representações oficiais.
-          Abaixo, uma seleção das obras mais icônicas do personagem.
+          Digite um número de 1 a 6 para ver a teoria.
         </p>
-        <div class="art-grid">
-          <div class="art-item art-item--tall">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Coat_of_arms_of_House_Stark.svg/400px-Coat_of_arms_of_House_Stark.svg.png"
-              alt="Brasão de House Stark"
-              loading="lazy"
-              onerror="this.style.display='none'"
-            />
-            <div class="art-placeholder">
-              <span class="art-placeholder__glyph">🐺</span>
-              <span class="art-placeholder__title">House Stark</span>
-              <span class="art-placeholder__quote">"Winter is coming."</span>
-            </div>
-            <div class="art-item__caption">
-              <strong>Brasão de House Stark</strong> — Wikimedia Commons
-              <span>Licença livre</span>
-            </div>
-          </div>
-          <div class="art-item">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Wall_-_Massive_Ice_Wall.jpg/400px-The_Wall_-_Massive_Ice_Wall.jpg"
-              alt="A Muralha"
-              loading="lazy"
-              onerror="this.style.display='none'"
-            />
-            <div class="art-placeholder">
-              <span class="art-placeholder__glyph">❄</span>
-              <span class="art-placeholder__title">A Muralha</span>
-              <span class="art-placeholder__quote">"700 pés de gelo e pedra."</span>
-            </div>
-            <div class="art-item__caption">
-              <strong>A Muralha</strong>
-              <span>Representação artística</span>
-            </div>
-          </div>
-          <div class="art-item">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Coat_of_arms_of_House_Targaryen.svg/400px-Coat_of_arms_of_House_Targaryen.svg.png"
-              alt="Brasão de House Targaryen"
-              loading="lazy"
-              onerror="this.style.display='none'"
-            />
-            <div class="art-placeholder">
-              <span class="art-placeholder__glyph">🐉</span>
-              <span class="art-placeholder__title">House Targaryen</span>
-              <span class="art-placeholder__quote">"Fire and Blood."</span>
-            </div>
-            <div class="art-item__caption">
-              <strong>Brasão de House Targaryen</strong> — Wikimedia Commons
-              <span>Licença livre</span>
-            </div>
-          </div>
-          <div class="art-item art-item--wide">
-            <div class="art-placeholder art-placeholder--quote-only">
-              <span class="art-placeholder__glyph">⚔</span>
-              <span class="art-placeholder__title">Garra — Valyrian Steel</span>
-              <span class="art-placeholder__quote">
-                "A espada que ele empunhou era Garra, feita do mesmo aço valyriano
-                que Ned Stark havia carregado durante anos."
-              </span>
-              <span class="art-placeholder__source">— A Storm of Swords</span>
-            </div>
-            <div class="art-item__caption">
-              <strong>Garra</strong> — Espada de Jon Snow
-              <span>Aço Valyriano, herança dos Starks</span>
-            </div>
-          </div>
-          <div class="art-item">
-            <div class="art-placeholder">
-              <span class="art-placeholder__glyph">☽</span>
-              <span class="art-placeholder__title">Ghost</span>
-              <span class="art-placeholder__quote">
-                "Branco como a neve, silencioso como a névoa."
-              </span>
-            </div>
-            <div class="art-item__caption">
-              <strong>Ghost</strong> — Direwolf de Jon Snow
-              <span>O único albino da ninhada</span>
-            </div>
-          </div>
-        </div>
-        <p class="art-note">
-          Todas as artes pertencem a seus respectivos artistas.
-          Fontes: <a href="https://awoiaf.westeros.org" target="_blank" rel="noopener">A Wiki of Ice and Fire</a>.
-        </p>
+        <input type="number" id="num" min="1" max="6" placeholder="1-6" />
+        <button onclick="myFunction()">Ver</button>
+        <div id="result"></div>
       </div>
     </section>
 
@@ -584,6 +501,30 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      const theories = {{{theories}}};
+
+      // Função para obter parâmetro da URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+    <script>
+      const theories = {{{theoriesJSON}}};
+
+      function myFunction() {
+        const n = parseInt(document.getElementById('num').value);
+        const t = theories.find(x => x.id === n);
+        
+        if (t) {
+          document.getElementById('result').innerHTML = '<h3>' + t.title + '</h3><p>' + t.description + '</p><p><strong>Evidências:</strong> ' + t.evidence + '</p>';
+        } else {
+          document.getElementById('result').innerHTML = '<p>Número inválido</p>';
+        }
+      }
+    </script>
 
   </body>
 </html>

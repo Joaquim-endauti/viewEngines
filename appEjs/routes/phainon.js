@@ -6,4 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('phainon', { title: 'Phainon' });
 });
 
+router.get('/')
+
 module.exports = router;
