@@ -64,11 +64,12 @@ strong { color: var(--gold-light); }
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px),
-    radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
-  background-size: 120px 120px, 60px 60px;
-  background-position: 0 0, 30px 30px;
-  opacity: 0.12;
+    radial-gradient(circle, rgba(255,255,255,1) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.85) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
+  background-size: 120px 120px, 70px 70px, 40px 40px;
+  background-position: 0 0, 30px 30px, 15px 55px;
+  opacity: 0.55;
   pointer-events: none;
   z-index: 0;
 }
@@ -104,15 +105,17 @@ strong { color: var(--gold-light); }
   font-family: 'Cinzel Decorative', serif;
   font-size: clamp(3.5rem, 8vw, 7rem);
   font-weight: 900;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-  padding: 0.15em 0.1em 0.25em;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  padding: 0.2em 0.15em 0.3em;
   margin-bottom: 12px;
   background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 40%, var(--flame) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   filter: drop-shadow(0 0 30px rgba(232,199,106,0.35));
+  overflow: visible;
 }
 
 .hero__subtitle {
@@ -476,4 +479,99 @@ strong { color: var(--gold-light); }
 @media (max-width: 560px) {
   .section { padding: 60px 6vw; }
   .hero { padding: 50px 6vw 40px; }
+}
+
+/* ============================================
+   CARROSSEL DE CURIOSIDADES
+   ============================================ */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.carousel__track-wrap {
+  flex: 1;
+  max-width: 680px;
+  min-height: 240px;
+  position: relative;
+}
+
+.carousel__track {
+  position: relative;
+  width: 100%;
+}
+
+.carousel__card {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid rgba(232,199,106,0.2);
+  border-radius: var(--radius);
+  padding: 40px 36px 32px;
+  gap: 14px;
+  animation: fadeSlideUp 0.35s ease both;
+}
+
+.carousel__card--active {
+  display: flex;
+}
+
+.carousel__card-icon {
+  font-size: 2.4rem;
+}
+
+.carousel__card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.carousel__card-desc {
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.carousel__counter {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  margin-top: 8px;
+}
+
+.carousel__btn {
+  background: rgba(232,199,106,0.08);
+  border: 1px solid rgba(232,199,106,0.3);
+  color: var(--gold);
+  font-size: 1.4rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel__btn:hover {
+  background: rgba(232,199,106,0.18);
+  border-color: var(--gold);
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .carousel { gap: 10px; }
+  .carousel__card { padding: 30px 20px 24px; }
+  .carousel__btn { width: 40px; height: 40px; font-size: 1.1rem; }
 }

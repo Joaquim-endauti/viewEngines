@@ -237,6 +237,46 @@
       </div>
     </section>
 
+    <!-- ===== CURIOSIDADES (CARROSSEL) ===== -->
+    <section class="section" id="curiosidades">
+      <div class="section__inner">
+        <h2 class="section__title">Curiosidades</h2>
+        <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" onclick="moveCarousel(-1)" aria-label="Anterior">&#8592;</button>
+          <div class="carousel__track-wrap">
+            <div class="carousel__track" id="carouselTrack">
+              <% curiosidades.forEach(function(c, i) { %>
+              <div class="carousel__card">
+                <div class="carousel__card-icon"><%= c.icon %></div>
+                <h3 class="carousel__card-title"><%= c.titulo %></h3>
+                <p class="carousel__card-desc"><%= c.texto %></p>
+                <span class="carousel__counter"><%= i + 1 %> / <%= curiosidades.length %></span>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+          <button class="carousel__btn carousel__btn--next" onclick="moveCarousel(1)" aria-label="Próximo">&#8594;</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let current = 0;
+      const cards = document.querySelectorAll('.carousel__card');
+
+      function showCard(index) {
+        cards.forEach(function(c) { c.classList.remove('carousel__card--active'); });
+        cards[index].classList.add('carousel__card--active');
+      }
+
+      function moveCarousel(dir) {
+        current = (current + dir + cards.length) % cards.length;
+        showCard(current);
+      }
+
+      showCard(0);
+    </script>
+
     <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
       <p>

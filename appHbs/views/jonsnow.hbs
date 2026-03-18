@@ -503,25 +503,19 @@
     </footer>
 
     <script>
-      const theories = {{{theories}}};
-
-      // Função para obter parâmetro da URL
-      function getQueryParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-      }
-
-    <script>
       const theories = {{{theoriesJSON}}};
 
       function myFunction() {
         const n = parseInt(document.getElementById('num').value);
         const t = theories.find(x => x.id === n);
-        
+
         if (t) {
-          document.getElementById('result').innerHTML = '<h3>' + t.title + '</h3><p>' + t.description + '</p><p><strong>Evidências:</strong> ' + t.evidence + '</p>';
+          document.getElementById('result').innerHTML =
+            '<h3>' + t.icon + ' ' + t.title + '</h3>' +
+            '<p>' + t.description + '</p>' +
+            '<p><strong>Evidências:</strong> ' + t.evidence + '</p>';
         } else {
-          document.getElementById('result').innerHTML = '<p>Número inválido</p>';
+          document.getElementById('result').innerHTML = '<p>Digite um número entre 1 e 6.</p>';
         }
       }
     </script>
